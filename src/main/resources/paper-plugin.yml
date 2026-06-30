@@ -5,13 +5,6 @@ api-version: '1.21'
 authors:
   - MelnCat
   - i14a-dsc
-commands:
-  identitytheft:
-    aliases: it
-    description: The main command.
-    permission: identitytheft.command.identitytheft
-  exit:
-    description: Resets your identity without permission checks.
 permissions:
   identitytheft.command.identitytheft:
     description: Allows using the root command.
