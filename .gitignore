@@ -1,6 +1,9 @@
 # User-specific stuff
 .idea/
 
+# build output
+bin/
+
 *.iml
 *.ipr
 *.iws
