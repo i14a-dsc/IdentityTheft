@@ -191,7 +191,7 @@ public class IdentityTheftCommand implements CommandExecutor, TabCompleter {
         }
         return suggestions.stream().filter(x -> x.toLowerCase().startsWith(args[args.length - 1].toLowerCase())).collect(Collectors.toList());
     }
-    
+    @SuppressWarnings("null")
     private List<String> listPlayerNames() {
         return Bukkit.getOnlinePlayers().stream().map(HumanEntity::getName).collect(Collectors.toList());
     }
