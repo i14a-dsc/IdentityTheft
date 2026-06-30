@@ -1,5 +1,6 @@
 package dev.melncat.identitytheft;
 
+import dev.melncat.identitytheft.command.ExitCommand;
 import dev.melncat.identitytheft.command.IdentityTheftCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +21,11 @@ public final class IdentityTheft extends JavaPlugin {
             .setExecutor(command);
         getCommand("identitytheft")
             .setTabCompleter(command);
-        
+
+        ExitCommand exitCommand = new ExitCommand(this);
+        getCommand("exit")
+            .setExecutor(exitCommand);
+
         Bukkit.getPluginManager().registerEvents(new IdentityTheftListener(this), this);
     }
     
